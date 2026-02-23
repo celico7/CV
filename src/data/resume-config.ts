@@ -105,7 +105,7 @@ export const resumeConfig: ResumeConfig = {
 						'Développement front-end et back-end d\'applications web avec Laravel',
 						'Conception et gestion de bases de données MySQL',
 						'Analyse fonctionnelle et rédaction de spécifications',
-						'Conception d\'interfaces UI/UX avec Figma et Tailwind',
+						'Conception d\'interfaces UI/UX avec Figma',
 						'Mise en place de scripts d\'automatisation de tâches récurrentes',
 					],
 				},
