@@ -57,6 +57,7 @@ export const resumeConfig: ResumeConfig = {
 				{ name: 'HTML' },
 				{ name: 'CSS' },
 				{ name: 'JavaScript' },
+				{ name: 'TypeScript (React.js)' },
 				{ name: 'PHP' },
 				{ name: 'Twig' },
 				{ name: 'MySQL' },
