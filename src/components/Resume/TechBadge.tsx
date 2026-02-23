@@ -66,20 +66,22 @@ export function TechBadge({ tech, color: colorOverride }: TechBadgeProps) {
     <>
       {/* Light mode */}
       <span
-        className="px-2 py-1 rounded text-xs font-medium dark:hidden"
+        className="px-2.5 py-1 rounded-full text-xs font-semibold dark:hidden shadow-sm border"
         style={{
-          backgroundColor: `${color}20`,
+          backgroundColor: `${color}15`,
           color: isLight ? '#374151' : color,
+          borderColor: `${color}30`,
         }}
       >
         {tech}
       </span>
       {/* Dark mode */}
       <span
-        className="px-2 py-1 rounded text-xs font-medium hidden dark:inline"
+        className="px-2.5 py-1 rounded-full text-xs font-semibold hidden dark:inline shadow-sm border"
         style={{
-          backgroundColor: `${darkModeColor}20`,
+          backgroundColor: `${darkModeColor}15`,
           color: darkModeColor,
+          borderColor: `${darkModeColor}30`,
         }}
       >
         {tech}

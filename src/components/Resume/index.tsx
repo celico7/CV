@@ -11,9 +11,9 @@ export function Resume() {
   const { resolve } = useTranslation()
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-8">
+    <div className="w-full max-w-4xl mx-auto px-4 py-8 print-layout">
       {/* Top bar: theme toggle + language + pdf */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 no-print">
         <PdfDownload />
         <div className="flex items-center gap-2">
           <LanguageToggle />
@@ -25,7 +25,7 @@ export function Resume() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-resume-bg-card rounded-lg shadow-2xl overflow-hidden dark:border dark:border-resume-primary/10"
+        className="bg-resume-bg-card rounded-lg shadow-2xl overflow-hidden dark:border dark:border-resume-primary/10 print-card"
       >
         <div className="flex flex-col-reverse md:flex-row">
           <Sidebar />
@@ -34,7 +34,7 @@ export function Resume() {
       </motion.div>
 
       {/* Hint */}
-      <p className="text-center text-sm text-resume-text-secondary mt-6">
+      <p className="text-center text-sm text-resume-text-secondary mt-6 no-print">
         {resolve(resumeConfig.labels.actions.clickHint)}
       </p>
     </div>

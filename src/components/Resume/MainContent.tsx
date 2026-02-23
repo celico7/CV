@@ -25,21 +25,26 @@ export function MainContent() {
   return (
     <div className="md:w-[62%] p-8">
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold tracking-[0.15em] text-resume-text">
           {personal.name.toUpperCase()}
         </h1>
-        <p className="text-base text-resume-text-secondary tracking-widest mt-2">
-          {resolve(personal.title).toUpperCase()}
-        </p>
+        <div className="mt-3 flex items-center justify-center gap-3">
+          <span className="h-px w-12 bg-resume-primary/30"></span>
+          <p className="text-sm text-resume-primary tracking-widest font-medium">
+            {resolve(personal.title).toUpperCase()}
+          </p>
+          <span className="h-px w-12 bg-resume-primary/30"></span>
+        </div>
         {personal.subtitle && (
-          <p className="text-sm text-resume-primary mt-1">{resolve(personal.subtitle)}</p>
+          <p className="text-sm text-resume-primary mt-2">{resolve(personal.subtitle)}</p>
         )}
       </div>
 
       {/* Experiences */}
       <div className="relative">
-        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-6 pb-2 border-b border-resume-primary/20">
+        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-6 pb-2 border-b-2 border-resume-primary/30 flex items-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-resume-primary"></span>
           {resolve(labels.sections.experience)}
         </h2>
         <div className="space-y-2">
@@ -82,7 +87,8 @@ export function MainContent() {
       {/* Projects */}
       {projects && projects.length > 0 && labels.sections.projects && (
         <div className="mt-8">
-          <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b border-resume-primary/20">
+          <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b-2 border-resume-primary/30 flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-resume-primary"></span>
             {resolve(labels.sections.projects)}
           </h2>
           <div className="space-y-1">
@@ -102,7 +108,8 @@ export function MainContent() {
 
       {/* Education */}
       <div className="mt-8">
-        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b border-resume-primary/20">
+        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b-2 border-resume-primary/30 flex items-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-resume-primary"></span>
           {resolve(labels.sections.education)}
         </h2>
         <div className="space-y-4">
@@ -114,6 +121,7 @@ export function MainContent() {
               specialty={edu.specialty ? resolve(edu.specialty) : undefined}
               period={edu.period}
               logo={edu.logo}
+              highlights={edu.highlights ? resolveArray(edu.highlights) : undefined}
             />
           ))}
         </div>

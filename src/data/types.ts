@@ -73,6 +73,7 @@ export interface Education {
   specialty?: LocalizedString
   period?: string
   logo?: string
+  highlights?: LocalizedStringArray
 }
 
 // ===== HOBBIES =====

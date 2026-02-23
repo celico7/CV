@@ -30,8 +30,8 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
   if (!photo || hasError) {
     return (
       <div className="flex justify-center mb-6">
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-resume-primary to-resume-primary-light flex items-center justify-center border-4 border-resume-bg/30 shadow-lg">
-          <span className="text-4xl">{emoji || '👨‍💻'}</span>
+        <div className="w-44 h-44 rounded-full bg-gradient-to-br from-resume-primary to-resume-primary-light flex items-center justify-center border-4 border-resume-bg/30 shadow-xl ring-4 ring-resume-primary/10">
+          <span className="text-5xl">{emoji || '👨‍💻'}</span>
         </div>
       </div>
     )
@@ -45,14 +45,14 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
         onAnimationComplete={() => setIsSpinning(false)}
         animate={{ rotateY: isSpinning ? 360 : 0 }}
         transition={{ duration: PHOTO_ANIMATION_DURATION, ease: 'easeInOut' }}
-        className="relative w-32 h-32 cursor-pointer"
+        className="relative w-44 h-44 cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
         role="button"
         tabIndex={0}
         aria-label={`Photo of ${name} — click to flip`}
       >
         <div
-          className="absolute inset-0 rounded-full overflow-hidden border-4 border-resume-bg/30 shadow-lg"
+          className="absolute inset-0 rounded-full overflow-hidden border-4 border-resume-bg/30 shadow-xl ring-4 ring-resume-primary/10"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
@@ -64,10 +64,10 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
           />
         </div>
         <div
-          className="absolute inset-0 rounded-full border-4 border-resume-bg/30 shadow-lg bg-gradient-to-br from-resume-primary to-resume-primary-light flex items-center justify-center"
+          className="absolute inset-0 rounded-full border-4 border-resume-bg/30 shadow-xl ring-4 ring-resume-primary/10 bg-gradient-to-br from-resume-primary to-resume-primary-light flex items-center justify-center"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
-          <span className="text-4xl">{emoji || '👨‍💻'}</span>
+          <span className="text-5xl">{emoji || '👨‍💻'}</span>
         </div>
       </motion.div>
     </div>
@@ -98,11 +98,11 @@ export function Sidebar() {
 
       {/* Skills */}
       <SidebarSection title={resolve(labels.sections.skills)}>
-        <div className="space-y-4">
+        <div className="space-y-5">
           {skills.map((category, i) => (
             <SkillCategory key={`${resolve(category.title)}-${i}`} title={resolve(category.title)}>
               {category.type === 'badges' && (
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {category.items.map((item) => {
                     const techName = typeof item.name === 'string' ? item.name : Object.values(item.name)[0]
                     return <TechBadge key={techName} tech={techName} color={item.color} />
@@ -141,16 +141,14 @@ export function Sidebar() {
       {/* Hobbies */}
       {hobbies && hobbies.length > 0 && labels.sections.hobbies && (
         <SidebarSection title={resolve(labels.sections.hobbies)}>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flex flex-wrap gap-2">
             {hobbies.map((hobby, i) => (
-              <div key={`${resolve(hobby.title)}-${i}`}>
-                <p className="font-medium text-sm text-resume-text">{resolve(hobby.title)}</p>
-                {hobby.details?.map((detail, j) => (
-                  <p key={j} className="text-xs text-resume-text-secondary">
-                    {resolve(detail)}
-                  </p>
-                ))}
-              </div>
+              <span
+                key={`${resolve(hobby.title)}-${i}`}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium bg-resume-primary/8 text-resume-text border border-resume-primary/15 hover:bg-resume-primary/15 transition-colors"
+              >
+                {resolve(hobby.title)}
+              </span>
             ))}
           </div>
         </SidebarSection>
