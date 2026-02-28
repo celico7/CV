@@ -61,7 +61,7 @@ function DevPresetSelector() {
   const presetNames = Object.keys(presets) as PresetName[]
 
   return (
-    <div className="fixed top-4 left-4 z-50 hidden md:block">
+    <div className="fixed top-4 left-4 z-50 hidden md:block no-print">
       <select
         value={preset}
         onChange={(e) => setPreset(e.target.value as PresetName)}
@@ -87,12 +87,12 @@ export default function App() {
         </ThemeVarsInjector>
       </LanguageProvider>
       {import.meta.env.DEV && (
-        <>
+        <div className="no-print">
           <DevPresetSelector />
           <Suspense>
             <Agentation />
           </Suspense>
-        </>
+        </div>
       )}
     </ThemeProvider>
   )

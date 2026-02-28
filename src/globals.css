@@ -62,6 +62,7 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     width: 210mm !important;
+    height: 297mm !important;
   }
 
   /* Hide non-printable elements */
@@ -69,16 +70,22 @@ body {
     display: none !important;
   }
 
-  /* === Page setup === */
-  @page {
-    size: A4 portrait;
-    margin: 6mm;
+  /* Hide Agentation feedback toolbar */
+  [data-feedback-toolbar] {
+    display: none !important;
   }
 
-  /* === Layout: fixed A4 width === */
+  /* === Page setup — zero margins to use full A4 === */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  /* === Layout: full A4 === */
   .print-layout {
     max-width: none !important;
     width: 210mm !important;
+    height: 297mm !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -88,39 +95,46 @@ body {
     box-shadow: none !important;
     border: 0 !important;
     overflow: visible !important;
-    width: 100% !important;
+    width: 210mm !important;
+    height: 297mm !important;
     max-width: none !important;
   }
 
-  /* Force side-by-side layout */
+  /* Force side-by-side layout, full height */
   .print-card > .flex {
     flex-direction: row !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
   }
 
-  /* === Sidebar === */
+  /* === Sidebar — stretch full height === */
   .print-card .md\:w-\[38\%\] {
     width: 36% !important;
-    padding: 10mm 6mm !important;
+    padding: 10mm 7mm !important;
+    height: 297mm !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  /* === Main content === */
+  /* === Main content — stretch full height === */
   .print-card .md\:w-\[62\%\] {
     width: 64% !important;
-    padding: 8mm 7mm !important;
+    padding: 10mm 9mm !important;
+    height: 297mm !important;
   }
 
-  /* === Photo: smaller in print === */
+  /* === Photo === */
   .print-card .w-44 {
-    width: 5rem !important;
-    height: 5rem !important;
+    width: 6rem !important;
+    height: 6rem !important;
   }
   .print-card .h-44 {
-    width: 5rem !important;
-    height: 5rem !important;
+    width: 6rem !important;
+    height: 6rem !important;
   }
   .print-card .relative.w-44 {
-    width: 5rem !important;
-    height: 5rem !important;
+    width: 6rem !important;
+    height: 6rem !important;
   }
 
   /* Photo: disable 3D transform so it shows flat */
@@ -144,126 +158,126 @@ body {
     box-shadow: none !important;
   }
 
-  /* === Typography — compact for A4 fit === */
+  /* === Typography — larger to fill A4 === */
   .print-card .text-3xl,
   .print-card .md\:text-4xl {
-    font-size: 1.2rem !important;
-    line-height: 1.5rem !important;
+    font-size: 1.55rem !important;
+    line-height: 1.9rem !important;
   }
 
   .print-card .text-base {
-    font-size: 0.7rem !important;
-    line-height: 0.95rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.15rem !important;
   }
 
   .print-card .text-sm {
-    font-size: 0.625rem !important;
-    line-height: 0.875rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.05rem !important;
   }
 
   .print-card .text-xs {
-    font-size: 0.56rem !important;
-    line-height: 0.78rem !important;
+    font-size: 0.68rem !important;
+    line-height: 0.92rem !important;
   }
 
   .print-card .text-5xl {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
   }
 
   .print-card .tracking-\[0\.15em\] {
-    letter-spacing: 0.08em !important;
+    letter-spacing: 0.1em !important;
   }
 
   .print-card .tracking-widest {
-    letter-spacing: 0.06em !important;
+    letter-spacing: 0.08em !important;
   }
 
-  /* === Spacing — compact for A4 fit === */
+  /* === Spacing — more generous to fill A4 === */
   .print-card .mb-10 {
-    margin-bottom: 4mm !important;
+    margin-bottom: 6mm !important;
   }
   .print-card .mb-6 {
-    margin-bottom: 2.5mm !important;
+    margin-bottom: 4mm !important;
   }
   .print-card .mb-4 {
-    margin-bottom: 2mm !important;
+    margin-bottom: 3mm !important;
   }
   .print-card .mb-3 {
-    margin-bottom: 1.5mm !important;
+    margin-bottom: 2.5mm !important;
   }
   .print-card .mt-8 {
-    margin-top: 3mm !important;
+    margin-top: 5mm !important;
   }
   .print-card .mt-3 {
-    margin-top: 1.5mm !important;
+    margin-top: 2.5mm !important;
   }
   .print-card .mt-2 {
-    margin-top: 1mm !important;
+    margin-top: 1.5mm !important;
   }
   .print-card .mt-1 {
-    margin-top: 0.5mm !important;
+    margin-top: 1mm !important;
   }
 
   .print-card .py-3 {
-    padding-top: 1.5mm !important;
-    padding-bottom: 1.5mm !important;
+    padding-top: 2mm !important;
+    padding-bottom: 2mm !important;
   }
   .print-card .p-4 {
-    padding: 2mm !important;
+    padding: 3mm !important;
   }
   .print-card .p-8 {
-    padding: 5mm !important;
+    padding: 7mm !important;
   }
   .print-card .px-3 {
-    padding-left: 2mm !important;
-    padding-right: 2mm !important;
+    padding-left: 2.5mm !important;
+    padding-right: 2.5mm !important;
   }
   .print-card .-mx-3 {
-    margin-left: -2mm !important;
-    margin-right: -2mm !important;
+    margin-left: -2.5mm !important;
+    margin-right: -2.5mm !important;
   }
 
   /* Space-y overrides */
   .print-card .space-y-5 > :not(:first-child) {
-    margin-top: 2.5mm !important;
+    margin-top: 4mm !important;
   }
   .print-card .space-y-4 > :not(:first-child) {
-    margin-top: 2mm !important;
+    margin-top: 3mm !important;
   }
   .print-card .space-y-3 > :not(:first-child) {
-    margin-top: 1.5mm !important;
+    margin-top: 2.5mm !important;
   }
   .print-card .space-y-2 > :not(:first-child) {
-    margin-top: 1mm !important;
+    margin-top: 1.5mm !important;
   }
 
   /* Gap overrides */
   .print-card .gap-4 {
-    gap: 2mm !important;
+    gap: 3mm !important;
   }
   .print-card .gap-3 {
-    gap: 1.5mm !important;
+    gap: 2.5mm !important;
   }
   .print-card .gap-2 {
-    gap: 1mm !important;
+    gap: 1.5mm !important;
   }
   .print-card .gap-1\.5 {
-    gap: 0.8mm !important;
+    gap: 1.2mm !important;
   }
 
   /* Experience year column */
   .print-card .w-20 {
-    width: 18mm !important;
+    width: 22mm !important;
   }
 
-  /* Badges compact */
+  /* Badges */
   .print-card .px-2\.5 {
-    padding-left: 1.5mm !important;
-    padding-right: 1.5mm !important;
+    padding-left: 2mm !important;
+    padding-right: 2mm !important;
   }
   .print-card .py-1 {
-    padding-top: 0.3mm !important;
-    padding-bottom: 0.3mm !important;
+    padding-top: 0.5mm !important;
+    padding-bottom: 0.5mm !important;
   }
 
   /* Education card */
@@ -273,10 +287,10 @@ body {
 
   /* Grid highlights in education */
   .print-card .gap-x-4 {
-    column-gap: 3mm !important;
+    column-gap: 4mm !important;
   }
   .print-card .gap-y-0\.5 {
-    row-gap: 0.5mm !important;
+    row-gap: 1mm !important;
   }
 
   /* Border widths — thinner in print */
