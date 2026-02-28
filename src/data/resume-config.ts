@@ -11,8 +11,8 @@ export const resumeConfig: ResumeConfig = {
 	},
 
 	seo: {
-		title: 'Célia Hoffmann — Étudiante en développement web',
-		description: 'CV interactif de Célia Hoffmann : expériences UI/UX, compétences web et parcours BUT MMI.',
+		title: 'Célia Hoffmann — Conception et développement de services numériques',
+		description: 'CV interactif de Célia Hoffmann : conception de services numériques, UX/UI, développement web full-stack et parcours BUT MMI.',
 	},
 
 	languages: {
@@ -32,6 +32,20 @@ export const resumeConfig: ResumeConfig = {
 	],
 
 	skills: [
+		{
+			title: { fr: 'Conception de services numériques' },
+			type: 'badges',
+			items: [
+				{ name: 'Analyse de besoins' },
+				{ name: 'UX/UI' },
+				{ name: 'Accessibilité' },
+				{ name: 'Éco-conception' },
+				{ name: 'Performance' },
+				{ name: 'Maintenabilité' },
+				{ name: 'Évolutivité' },
+				{ name: 'Modélisation de données' },
+			],
+		},
 		{
 			title: { fr: 'Langues' },
 			type: 'languages',
@@ -68,11 +82,12 @@ export const resumeConfig: ResumeConfig = {
 			],
 		},
 		{
-			title: { fr: 'Outils' },
+			title: { fr: 'Outils & IA' },
 			type: 'badges',
 			items: [
 				{ name: 'VSCode' },
 				{ name: 'Git' },
+				{ name: 'GitHub Copilot' },
 				{ name: 'PhpMyAdmin' },
 				{ name: 'Unity' },
 				{ name: 'Unreal Engine' },
@@ -92,9 +107,9 @@ export const resumeConfig: ResumeConfig = {
 			type: { fr: 'Stage (4 mois)' },
 			period: { fr: 'Février — Juin 2026' },
 			description: {
-				fr: 'Développement d\'applications web internes en Laravel, conception d\'interfaces utilisateur et mise en place de processus d\'automatisation.',
+				fr: 'Conception et développement d\'applications web internes en Laravel : analyse des besoins métier, architecture applicative, interfaces utilisateur et automatisation.',
 			},
-			techs: ['Laravel', 'PHP', 'Tailwind', 'MySQL'],
+			techs: ['Laravel', 'PHP', 'Tailwind', 'MySQL', 'GitHub Copilot'],
 			isHighlighted: true,
 			details: {
 				context: {
@@ -102,15 +117,16 @@ export const resumeConfig: ResumeConfig = {
 				},
 				tasks: {
 					fr: [
-						'Développement front-end et back-end d\'applications web avec Laravel',
+						'Analyse des besoins métier et traduction en spécifications fonctionnelles',
+						'Conception de l\'architecture applicative (maintenabilité, évolutivité)',
+						'Développement front-end et back-end d\'applications web',
 						'Conception et gestion de bases de données MySQL',
-						'Analyse fonctionnelle et rédaction de spécifications',
 						'Conception d\'interfaces UI/UX avec Figma',
 						'Mise en place de scripts d\'automatisation de tâches récurrentes',
 					],
 				},
 				env: {
-					fr: 'Laravel / PHP / Tailwind CSS / MySQL / Figma',
+					fr: 'Laravel / PHP / Tailwind CSS / MySQL / Figma / GitHub Copilot',
 				},
 			},
 		},
@@ -121,7 +137,7 @@ export const resumeConfig: ResumeConfig = {
 			type: { fr: 'Stage + Intérim' },
 			period: { fr: 'Mai — Août 2025' },
 			description: {
-				fr: 'Conception d\'interfaces et analyse ergonomique de l\'écran d\'un défibrillateur, en collaboration directe avec la BSPP.',
+				fr: 'Conception centrée utilisateur en contexte critique : interfaces et analyse ergonomique de l\'écran d\'un défibrillateur, en collaboration directe avec la BSPP.',
 			},
 			techs: ['Figma', 'UI/UX Design'],
 			details: {
@@ -130,14 +146,16 @@ export const resumeConfig: ResumeConfig = {
 				},
 				tasks: {
 					fr: [
+						'Conception centrée utilisateur en contexte critique (urgence médicale)',
 						'Conception des interfaces utilisateur pour l\'écran d\'un défibrillateur',
 						'Audit ergonomique et recommandations UX pour améliorer la lisibilité en situation d\'urgence',
+						'Prise en compte de l\'accessibilité et de la lisibilité en conditions dégradées',
 						'Collaboration directe avec la BSPP (Brigade des Sapeurs-Pompiers de Paris) pour les retours terrain',
 						'Animation de réunions inter-services (R&D, marketing, réglementaire)',
 					],
 				},
 				env: {
-					fr: 'Figma / UI Design / UX Research / Ergonomie médicale',
+					fr: 'Figma / UI Design / UX Research / Accessibilité / Ergonomie médicale',
 				},
 			},
 		},
@@ -162,13 +180,11 @@ export const resumeConfig: ResumeConfig = {
 			period: 'Depuis 2023',
 			highlights: {
 				fr: [
-					'Développement web',
-					'Communication',
-					'UX Design',
-					'Création Audiovisuelle',
-					'Infographique',
-					'Gestion de projet',
-					'Mentorat technique auprès des étudiants de 1ère année en développement web',
+					'Conception de services numériques (UX, accessibilité)',
+					'Développement web full-stack',
+					'Analyse de besoins et gestion de projet',
+					'Communication & création audiovisuelle',
+					'Mentorat auprès des étudiants de 1ère année',
 				],
 			},
 		},
