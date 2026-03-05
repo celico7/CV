@@ -104,7 +104,7 @@ export const resumeConfig: ResumeConfig = {
 			id: 'stage-itgreen-2026',
 			company: { fr: 'ITGreen' },
 			role: { fr: 'Développeuse web full-stack' },
-			type: { fr: 'Stage (4 mois)' },
+			type: { fr: 'Stage' },
 			period: { fr: 'Février — Juin 2026' },
 			description: {
 				fr: 'Conception et développement d\'applications web internes en Laravel : analyse des besoins métier, architecture applicative, interfaces utilisateur et automatisation.',
@@ -118,7 +118,7 @@ export const resumeConfig: ResumeConfig = {
 				tasks: {
 					fr: [
 						'Analyse des besoins métier et traduction en spécifications fonctionnelles',
-						'Conception de l\'architecture applicative (maintenabilité, évolutivité)',
+						'Refonte du site web, création d\'un intranet client',
 						'Développement front-end et back-end d\'applications web',
 						'Conception et gestion de bases de données MySQL',
 						'Conception d\'interfaces UI/UX avec Figma',
@@ -164,7 +164,7 @@ export const resumeConfig: ResumeConfig = {
 			company: { fr: 'Mairie d\'Oberhoffen-sur-Moder' },
 			role: { fr: 'Agent technique polyvalent' },
 			type: { fr: 'Job d\'été' },
-			period: { fr: 'Été 2024' },
+			period: { fr: 'Août 2024' },
 			description: {
 				fr: 'Entretien des espaces publics, logistique événementielle et accueil du public.',
 			},
@@ -189,7 +189,7 @@ export const resumeConfig: ResumeConfig = {
 			},
 		},
 		{
-			school: { fr: 'Lycée Heinrich Nessel — Haguenau' },
+			school: { fr: 'Lycée Heinrich Nessel - Haguenau' },
 			degree: { fr: 'Baccalauréat général' },
 			specialty: {
 				fr: 'Spécialités : Numérique et Sciences Informatiques, Anglais Monde Contemporain + option mathématiques complémentaires',
