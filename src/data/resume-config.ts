@@ -105,7 +105,7 @@ export const resumeConfig: ResumeConfig = {
 			company: { fr: 'ITGreen' },
 			role: { fr: 'Développeuse web full-stack' },
 			type: { fr: 'Stage' },
-			period: { fr: 'Février — Juin 2026' },
+			period: { fr: 'Février - Juin 2026' },
 			description: {
 				fr: 'Conception et développement d\'applications web internes en Laravel : analyse des besoins métier, architecture applicative, interfaces utilisateur et automatisation.',
 			},
@@ -135,7 +135,7 @@ export const resumeConfig: ResumeConfig = {
 			company: { fr: 'SCHILLER Medical' },
 			role: { fr: 'UI/UX Designer' },
 			type: { fr: 'Stage + Intérim' },
-			period: { fr: 'Mai — Août 2025' },
+			period: { fr: 'Mai - Août 2025' },
 			description: {
 				fr: 'Conception centrée utilisateur en contexte critique : interfaces et analyse ergonomique de l\'écran d\'un défibrillateur, en collaboration directe avec la BSPP.',
 			},
@@ -175,7 +175,7 @@ export const resumeConfig: ResumeConfig = {
 	education: [
 		{
 			school: { fr: 'IUT de Haguenau' },
-			degree: { fr: 'BUT Métiers du Multimédia et de l\'Internet — 3ème année' },
+			degree: { fr: 'BUT Métiers du Multimédia et de l\'Internet - 3ème année' },
 			specialty: { fr: 'Parcours Développement web et dispositifs interactifs' },
 			period: 'Depuis 2023',
 			highlights: {
