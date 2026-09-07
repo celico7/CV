@@ -214,7 +214,7 @@ export const resumeConfig: ResumeConfig = {
 
 	hobbies: [
 		{ title: { fr: 'Jeux vidéo' } },
-		{ title: { fr: 'Projets créatifs (Unity, Blender)' } },
+		{ title: { fr: 'Création de projets créatifs' } },
 		{ title: { fr: 'Veille technologique' } },
 		{ title: { fr: 'Musique' } },
 	],
