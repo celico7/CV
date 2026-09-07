@@ -173,6 +173,20 @@ export const resumeConfig: ResumeConfig = {
 	],
 
 	education: [
+    {
+			school: { fr: 'Université Côte d’Azur - Cannes' },
+			degree: { fr: 'Master 1 Humanités et Industries Créatives' },
+			specialty: { fr: 'Parcours P2i (Pratiques Immersives et Interactives)' },
+			period: 'Actuellement',
+			highlights: {
+				fr: [
+					'Jeux vidéo',
+					'Réalité virtuelle',
+					'Réalité augmentée',
+					'Création audiovisuelle immersive',
+				],
+			},
+		},
 		{
 			school: { fr: 'IUT de Haguenau' },
 			degree: { fr: 'BUT Métiers du Multimédia et de l\'Internet - 3ème année' },
